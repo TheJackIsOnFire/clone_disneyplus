@@ -1,6 +1,8 @@
 //importacoes
 @use 'variaveis';
-@use 'hero'; //./ e extancao ocultados
+@use 'hero'; 
+@use 'shows';
+@use 'plans';
 
 //fontes
 @font-face {
@@ -20,12 +22,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Avenir, sans-serif;
 }
 
 //Cor de fundo da pagina
 body {
     background-color: variaveis.$corDeFundo;
-    font-family: Avenir, sans-serif;
 }
 
 //Mixins
@@ -68,4 +70,19 @@ body {
     @include text(18);
     color: variaveis.$corTextoSecundario;
     text-decoration: underline;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    color: variaveis.$corTextoSecundario;
+    background-color: #6421ff;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-top: 2vw;
+    margin-bottom: 8px;
+    border: none;
+    cursor: pointer;
 }
