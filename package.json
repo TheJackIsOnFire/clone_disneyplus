@@ -15,6 +15,10 @@
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.1.0",
-    "sass": "^1.72.0"
+    "sass": "^1.72.0",
+    "uglify": "^0.1.5"
+  },
+  "dependencies": {
+    "gulp-uglify": "^3.0.2"
   }
 }
