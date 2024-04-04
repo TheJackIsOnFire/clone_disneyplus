@@ -1,0 +1,87 @@
+//secao perguntas recentes
+
+.faq {
+    padding: 5.6vw;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    &__questions {
+
+        &__item {
+            background-color: #13151d;
+            margin-bottom: 16px;
+
+            &__question {
+                color: #fff;
+                font-size: 20px;
+                font-weight: bold;
+                padding: 24px;
+                display: block;
+                cursor: pointer;
+                position: relative;
+
+                @media (max-width: 768px) {
+                    font-size: 16px;
+                    padding: 24px 52px 24px 24px;
+
+
+                }
+
+                &::after {
+                    content: '+';
+                    position: absolute;
+                    top: 0;
+                    right: 24px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    font-size: 40px;
+                    padding-left: 26px;    
+
+                    @media (max-width: 768px) {                        
+                        padding: 0;
+                    }
+
+                }
+            } 
+
+            &__answer {
+                height: 0;
+                overflow: hidden; 
+                padding: 0 24px;
+                transition: height, .4s ease;
+
+
+            }
+
+            &--is-open {   
+                
+                .faq__questions__item__question::after {
+                    content: '-';
+                }
+
+                .faq__questions__item__answer {
+                    height: auto;               
+                    transition: height, .4s ease;
+                    padding: 0 24px 24px 24px;
+
+                    &__list {
+                        padding-left: 40px;
+
+                        &__item {
+                            margin-top: 20px;
+                            list-style: disc;
+                        }
+                    }
+
+                    &__last__item {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
